@@ -20,7 +20,7 @@ HyperBreach is a next-generation offensive security platform designed for compre
 - **Directory Services**: LDAP
 - **Web Applications**: HTTP/HTTPS forms, REST APIs
 - **Specialized**: Custom protocol support via plugin architecture
-- **IndustryStandard** Protocols Implemented like Memcache Modbus and Mqtt 
+- **IndustryStandard** Protocols Implemented like Memcache Modbus and Mqtt
 
 ### Advanced Attack Engine
 - **Parallel Processing**: Simultaneous attacks across 20+ protocols
@@ -42,6 +42,19 @@ HyperBreach is a next-generation offensive security platform designed for compre
 - **Form Analysis**: Automated web form extraction and testing
 - **Attack Chain Automation**: Multi-stage vulnerability exploitation
 - **Comprehensive Reporting**: Multiple output formats (JSON, XML, CSV, PDF)
+  
+### API Security Testing
+
+- REST & JSON API assessment
+- Token and session analysis
+- Async request execution
+- Proxy-aware operations
+- Custom payload support
+- Multi-endpoint handling
+- Modular testing workflows
+
+-- 
+### Users there is lots of Stuff That is unpredectable..
 
 ## Architecture
 
