@@ -54,7 +54,9 @@ HyperBreach is a next-generation offensive security platform designed for compre
 - Modular testing workflows
 
 -- 
-### Users there is lots of Stuff That is unpredectable..
+### Users there is lots of Stuff That is unpredectable
+
+This project is built with experimental and interactive features designed to surprise and engage users. Some behaviors may feel unexpected — that’s part of the exploration experience. Dive in and see how it reacts when you interact with it
 
 ## Architecture
 
@@ -76,8 +78,9 @@ HyperBreach is a next-generation offensive security platform designed for compre
 
 ### Prerequisites
 - Rust 1.70 or higher
-- OpenSSL development libraries
+- OpenSSL development libraries 
 - C++ compiler (for some protocol dependencies)
+- Hence Already Provided in Binary
 
 ### Download Binary from Releases 
 ```bash
