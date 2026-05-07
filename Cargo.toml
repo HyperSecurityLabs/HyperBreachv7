@@ -1,0 +1,167 @@
+[package]
+name = "hyperbreach-rs"
+version = "2.0.0"
+edition = "2021"
+authors = ["Offensive Security Team"]
+description = "Advanced real bruteforce tool for penetration testing"
+license = "MIT"
+repository = "https://github.com/offensive-security/hyperbreach-rs"
+
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+clap = { version = "4.4", features = ["derive", "env"] }
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json", "socks", "cookies", "stream", "gzip"] }
+futures = "0.3"
+async-stream = "0.3"
+rand = "0.8"
+hex = "0.4"
+sha2 = "0.10"
+hmac = "0.12"
+md5 = "0.7"
+base64 = "0.21"
+regex = "1.10"
+uuid = { version = "1.6", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+log = "0.4"
+env_logger = "0.10"
+colored = "2.1"
+indicatif = "0.17"
+crossterm = "0.27"
+async-trait = "0.1"
+
+# Real protocol implementations
+# SSH and Telnet - Pure Rust implementations
+russh = "0.44"  # Pure Rust SSH client library
+russh-keys = "0.44"  # SSH key handling in pure Rust
+ssh-key = "0.6"  # SSH key handling in pure Rust
+ssh2 = "0.9"  # Alternative SSH library for compatibility
+telnet = "0.2"
+
+# Database protocols
+redis = { version = "0.23", features = ["tokio-comp"] }
+mysql = "24.0"
+postgres = "0.19"
+mongodb = "2.8"
+
+# Email protocols
+# Note: Removed pop3 crate due to OpenSSL conflicts - will implement custom POP3
+# pop3 = "1.0.6"
+# Note: Custom SMTP implementation to avoid OpenSSL conflicts
+# smtp = "0.3"
+
+# Web protocols
+ftp = "3.0"
+imap = "2.3"
+
+# Remote desktop
+# Note: Custom RDP implementation for maximum compatibility
+vnc = "0.4"
+
+# File sharing
+# SMB and NTLM support
+# Note: Custom NTLM implementation for maximum compatibility
+# Removed smb crate due to dependency conflicts with sspi
+
+# Directory services
+ldap3 = { version = "0.11", features = ["rustls"] }
+
+# New high-priority protocols
+# SNMP for network device management
+# Note: No stable SNMP crate available - removing fake implementation
+
+# Modbus for industrial/SCADA systems
+tokio-modbus = "0.9"
+
+# MQTT for IoT messaging
+# Note: Using rumqttc as mqtt-client is not available
+rumqttc = "0.24"
+
+# Memcached for caching systems
+memcache = "0.17"
+
+# SSL/TLS and crypto
+x509-parser = "0.15"
+webpki-roots = "0.25"
+rustls = "0.21"
+rcgen = "0.13"
+ring = "0.16"
+md4 = "0.10"
+digest = "0.10"
+num-bigint = "0.4"
+crypto-bigint = "0.4"
+subtle = "2.6"
+rsa = "0.7"
+native-tls = "0.2"
+
+# Network utilities and IP validation
+socket2 = "0.6"
+nix = "0.28"
+libc = "0.2"
+ipnetwork = "0.21"
+trust-dns-resolver = "0.23"
+
+# Web scraping and automation
+scraper = "0.19"
+html5ever = "0.26"
+cssparser = "0.34"
+selectors = "0.25"
+
+# Performance and parallelism
+rayon = "1.8"
+crossbeam = "0.8"
+parking_lot = "0.12"
+byteorder = "1.5"
+itertools = "0.12"
+
+# Data processing
+csv = "1.3"
+urlencoding = "2.1"
+percent-encoding = "2.3"
+url = "2.5"
+humansize = "2.1"
+
+# Error handling and debugging
+thiserror = "1.0"
+backtrace = "0.3"
+
+# Configuration and serialization
+toml = "0.8"
+config = "0.13"
+
+
+# Advanced HTTP and AI capabilities
+surf = "2.3"
+futures-util = "0.3"
+
+# Human behavior simulation
+noise = "0.8"
+probability = "0.18"
+
+[target.'cfg(unix)'.dependencies]
+users = "0.11"
+nix = { version = "0.27", features = ["user", "socket", "process"] }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winsock2", "ws2tcpip"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 202
+panic = "abort"
+strip = true
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[[bin]]
+name = "hyperbreach"
+path = "src/main.rs"
+
+[lib]
+name = "hyperbreach_rs"
+path = "src/lib.rs"
