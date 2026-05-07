@@ -1,11 +1,11 @@
 [package]
-name = "hyperbreach-rs"
-version = "2.0.0"
+name = "hyperbreach"
+version = "7.2.1"
 edition = "2021"
 authors = ["Offensive Security Team"]
 description = "Advanced real bruteforce tool for penetration testing"
 license = "MIT"
-repository = "https://github.com/offensive-security/hyperbreach-rs"
+repository = "https://github.com/hypersecuritylabs/hyperbreachv7"
 
 [dependencies]
 tokio = { version = "1.35", features = ["full"] }
