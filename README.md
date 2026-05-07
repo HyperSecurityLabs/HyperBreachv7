@@ -66,38 +66,33 @@ HyperBreach is a next-generation offensive security platform designed for compre
 - OpenSSL development libraries
 - C++ compiler (for some protocol dependencies)
 
-### Build from Source
+### Download Binary from Releases 
 ```bash
-git clone https://github.com/offensive-security/hyperbreach-rs
-cd hyperbreach-rs
-cargo build --release
+
+Download the latest release from [GitHub Releases](https://github.com/Hypersecuritylabs/hyperbreachv7/releases) and extract to your preferred location.
 ```
-
-### Binary Installation
-Download the latest release from [GitHub Releases](https://github.com/Hypersecuritylabs/hyperbreach/releases) and extract to your preferred location.
-
 ## Usage
 
 ### Basic Syntax
 ```bash
-hyperbreach [TARGET] [OPTIONS]
+hyperbreach  attack  -t [TARGET] [OPTIONS]
 ```
 
 ### Common Examples
 
 #### SSH Brute Force
 ```bash
-hyperbreach  attack ssh://192.168.1.100:22 -u admin -p /path/to/wordlist.txt
+hyperbreach  attack -t ssh://192.168.1.100:22 -u admin -p /path/to/wordlist.txt
 ```
 
 #### Multi-Protocol Attack
 ```bash
-hyperbreach  attack 192.168.1.0/24 --protocols ssh,ftp,rdp --user-file users.txt --pass-file passes.txt
+hyperbreach  attack  -t 192.168.1.0/24 --protocols ssh,ftp,rdp --user-file users.txt --pass passes.txt
 ```
 
 #### Web Form Attack
 ```bash
-hyperbreach attack  https://example.com/login --form-data "username=^USER^&password=^PASS^" -u admin -p passwords.txt
+hyperbreach attack -t https://example.com/login --form-data "username=^USER^&password=^PASS^" -u admin -p passwords.txt
 ```
 
 #### Stealth Mode
@@ -105,7 +100,7 @@ hyperbreach attack  https://example.com/login --form-data "username=^USER^&passw
 hyperbreach target.com --stealth --jitter 1000-3000 --proxy-chain proxies.txt
 ```
 
-### Configuration Files
+### Configuration Files Will release Later in upgraded Version 
 Create a configuration file for complex scenarios:
 ```toml
 [general]
@@ -240,14 +235,17 @@ cargo test --features integration-tests
 - **CPU**: Efficient multi-core utilization
 - **Network**: Optimized connection management
 - **Storage**: Minimal disk I/O during operations
+- 
+## Support & Community
 
-## Support and Documentation
+🌐 Website  
+[HyperSecurity Offensive Labs](https://hypersecuritylabs.netlify.app)
 
-### Documentation
+💬 Forum  
+[Hackersploit Forum Profile](https://forum.hackersploit.org/u/hypersecurityofflabs/activity)
 
-
-
-
+📢 Telegram  
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?logo=telegram&logoColor=white)](https://t.me/hypersecurity_offsec)
 
 Enterprise support packages available:
 - Priority bug fixes and updates
@@ -268,19 +266,29 @@ HyperBreach is released under the Apache License. See [LICENSE](LICENSE) for det
 
 ## Version History
 
-### v2.0.0 (Current)
+### v7(Current)
 - Complete rewrite in Rust
 - 20+ protocol implementations
 - Advanced evasion capabilities
 - Enterprise-grade reporting
 
-### v1.x Series
-- Python-based prototype
-- Limited protocol support
-- Basic functionality only
+## Disclaimer
 
----
+HyperBreach is currently under active development and testing.
+Features, modules, and performance may change between releases.
 
-**Disclaimer**: HyperBreach is intended for authorized security testing only. Users are responsible for ensuring compliance with all applicable laws and regulations. The authors assume no liability for misuse or unauthorized use of this software.
+This project is intended strictly for:
 
-For more information, visit [https://github.com/offensive-security/hyperbreach-rs](https://github.com/offensive-security/hyperbreach-rs)
+- Authorized security assessments
+- Authentication security research
+- Educational and laboratory environments
+- Defensive security testing
+
+Unauthorized access, credential abuse, service disruption,
+or illegal activity using this software is strictly prohibited.
+
+The developers and contributors of HyperBreach are not
+responsible for misuse, damages, or violations of applicable laws.
+
+Use responsibly and only in environments where you have
+explicit permission.. 
