@@ -1,4 +1,4 @@
-# HyperBreach v7
+# HyperBreach v7.2.1
 
 **Advanced Offensive Security Testing Platform**
 
@@ -57,7 +57,6 @@ HyperBreach is a next-generation offensive security platform designed for compre
 ### Users there is lots of Stuff That is unpredectable
 
 This project is built with experimental and interactive features designed to surprise and engage users. Some behaviors may feel unexpected — that’s part of the exploration experience. Dive in and see how it reacts when you interact with it
-
 ## Architecture
 
 ### Core Components
