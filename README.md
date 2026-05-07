@@ -1,9 +1,9 @@
-# HyperBreach v2.0
+# HyperBreach v7
 
 **Advanced Offensive Security Testing Platform**
 
 [![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg)](https://www.rust-lang.org)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Apache-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg)]()
 
 ## Overview
@@ -74,7 +74,7 @@ cargo build --release
 ```
 
 ### Binary Installation
-Download the latest release from [GitHub Releases](https://github.com/offensive-security/hyperbreach-rs/releases) and extract to your preferred location.
+Download the latest release from [GitHub Releases](https://github.com/Hypersecuritylabs/hyperbreach/releases) and extract to your preferred location.
 
 ## Usage
 
@@ -244,17 +244,11 @@ cargo test --features integration-tests
 ## Support and Documentation
 
 ### Documentation
-- [User Manual](docs/user-manual.md)
-- [API Reference](docs/api-reference.md)
-- [Protocol Guides](docs/protocols/)
-- [Plugin Development](docs/plugin-development.md)
 
-### Community
-- [GitHub Discussions](https://github.com/offensive-security/hyperbreach-rs/discussions)
-- [Security Forums](https://forums.offensive-security.com)
-- [Training Materials](https://training.offensive-security.com)
 
-### Professional Support
+
+
+
 Enterprise support packages available:
 - Priority bug fixes and updates
 - Custom development and integration
@@ -263,7 +257,7 @@ Enterprise support packages available:
 
 ## License
 
-HyperBreach is released under the MIT License. See [LICENSE](LICENSE) for details.
+HyperBreach is released under the Apache License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
